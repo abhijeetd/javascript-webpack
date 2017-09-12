@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reporting DashBoard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" />
+	
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/dashboard/networkanamolies.css" rel="stylesheet" />
+    <link href="libs/css/billboard.css" rel="stylesheet" />
+    <link href="libs/css/billboard.min.css" rel="stylesheet" />
+    <link href="libs/css/jquery.datepicker.css" rel="stylesheet" />
+    <link href="libs/css/jquery.timepicker.css" rel="stylesheet" /> 
+
+</head>
+<body>
+    <div id="root">
+        <div data-reactroot="">
+            <header>
+                <hgroup>
+                    <h1>&#xe900;<a href="{{site.baseurl}}">neustar inc.</a></h1>
+                    <h2>Reporting Dashboard</h2>
+                </hgroup>
+            </header>
+
+            <div id="root">
+                <div data-reactroot="">
+                    <main>
+                        <nav>
+
+                        </nav>
+                        <section>
+                            <div id="dashboard">
+                                <div>
+                                    <div id="filterDiv">
+                                        <select id="dateTimeHourSel" class="div-shadow">
+                                            <option value="1">Last 1 hour</option>
+                                            <option value="2">Last 2 hours</option>
+                                            <option value="3">Last 3 hours</option>
+                                            <option value="4">Last 4 hours</option>
+                                            <option value="5">Last 5 hours</option>
+                                            <option value="customDate">Custom date</option>
+                                        </select>
+                                        <span class="float-left">
+                                            <span id="dateTimeHourDiv" class="custom" style="display:none;">
+                                                <span id="startdatetime"><label class="failedNumbersMsg float-left"></label> <input type="text" id="startDate" class="startDate"> <input type="text" id="startTime" class="starttime"> </span>
+                                                <span><label class="failedNumbersMsg">to</label> <input type="text" id="endDate" class="endDate"> <input type="text" id="endTime" class="endTime">	</span>
+                                            </span>
+                                            <span><button class="refreshIcon">GO</button></span>
+
+                                        </span>
+
+
+                                    </div>
+                                    <div style="height:20px;"><span id="msgShow" class="msgShow"> </span></div>
+                                    <div id="exceptionChart">
+                                        <div id="successFailedTrendChart">
+                                            <div class="totalFailedMessages div-shadow">
+                                                <div>
+                                                    <label class="failedNumbersMsg float-left">Total  Message Count</label>
+                                                </div>
+
+                                                <button id="percentFailedCountForChart">.</button>
+                                                <button id="percentFailedNumberForChart">.</button>
+                                                <div class="align-noDataTotalCounts">
+                                                    <span class="noDataMsgForDate">No events to show for selected<br /> date and time filter range.</span>
+                                                </div>
+                                                <div>
+
+                                                    <div id="chartTotalSuccessFailedCount" style="margin: -45% 0 0 3%; padding-top: 60px; position: absolute !important; display: block! important; "></div>
+                                                    <div id="chartTotalSuccessFailedPercentage" style="margin: -45% 0 0 3%; padding-top: 60px; position: absolute !important; display: block !important; "></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="bindTotalFailCount"> </div>
+                                        <div id="failedFleets" class="div-shadow">
+                                            <div class="alignFailedMessages">
+                                                <div>
+                                                    <label class="failedNumbersMsg float-left">Failed Messages by </label>
+                                                    <select id="selectFailedMessagesByDeviceOrFleet" class="div-shadow">
+                                                        <option value="1">Fleet</option>
+                                                        <option value="2">Device</option>
+                                                    </select>
+                                                </div>
+                                                <div>
+                                                    <span class="expandIcon">.</span>
+                                                    <span class="collapseIcon">.</span>
+                                                    <button class="graph-icon">.</button>
+                                                    <button class="grid-icon">.</button>
+
+                                                </div>
+                                                <div id="failed-msg-jqgrid">
+                                                    <table id="failedMsgTable"></table>
+                                                </div>
+                                                <div>
+                                                    <div id="chartFailedFleet"> </div>
+                                                    <div id="chartFailedDevice"> </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="align-noDataMsgForDate">
+                                                <span class="noDataMsgForDate">No events to show for selected date and time filter range.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <form class="padding-top95">
+                                        <div class="showFailedMsg div-shadow">
+                                            <div class="failedMsgSection">
+
+                                                <div class="fleetLabel hideListMsgHeader">
+                                                    <span class="float-left padding-top-8">Failed Messages for Fleet : </span><span class="fleetDeviceLable float-left padding-top-8">  </span><span title="Clear Message Log" class="  float-left padding-top-8 hideMsgList">    X </span>
+                                                </div>
+                                                <div class="deviceIdLabel float-left hideListMsgHeader">
+                                                    <span class="float-left padding-top-8">Failed Messages for Device :  </span><span class="fleetDeviceLable float-left padding-top-8">  </span><span class=" float-left padding-top-8 hideMsgList">    X </span>
+                                                </div>
+                                                <label class="search">
+                                                    <input type="search" class="searchText div-shadow search-box-failedlist" id="myInput" placeholder="Search in Message Log..." />
+                                                </label>
+                                            </div>
+
+                                            <div class="overflowListOfEvents">
+                                                <div class="failedMsgDefaultMsg">No data to show. Select a device above to show messages for that device.</div>
+                                                <table id="listOfMessagesTable"></table>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+
+                    <div id="dialog">
+                        <div>
+                            <section class="modal">
+                                <header>
+                                    <h4>Dialog Header</h4>
+                                    <h5>Dialog Sub Header</h5>
+                                    <label>
+                                        <button type="button"></button>
+                                    </label>
+                                </header>
+                                <article>
+                                    <form>
+                                        <blockquote>
+                                            Oops! There was an issue with your request. Please try again!<br />
+                                            If the issue continues, please contact OneID Support at: <a href="mailto:support@oneid.com">support@oneid.com</a><br />
+                                        </blockquote>
+                                        <footer>
+                                            <label>
+                                                <input value="ok" type="submit" />
+                                            </label>
+                                        </footer>
+                                    </form>
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="global">
+            <nav>
+                <small>&copy; Neustar Inc. Copyright 2016 – Neustar Secure Device Directory</small>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Terms</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="#">Cookies</a>
+                    </li>
+                    <li>
+                        <a href="#">Sitemap</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+
+    </div>
+	 <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- Lib files -->
+	
+    <script src="libs/JS/jquery.min.js"></script>   
+    <script src="libs/JS/grid.locale-en.js"></script>
+    <script src="libs/JS/jquery-ui.js"></script>
+    <script src="libs/JS/jquery.jqGrid.min.js"></script>
+    <script src="libs/JS/jquery.timepicker.js"></script>
+    <script src="libs/JS/billboard.js"></script>
+    <script src="libs/JS/billboard.min.js"></script> 
+
+    <!-- Custom files -->
+	
+    <script src="js/dashboard/networkanamolies/app.js"></script>
+    <script src="js/dashboard/utility.js"></script>
+    <script src="js/dashboard/networkanamolies/duration.js"></script>
+    <script src="js/dashboard/networkanamolies/totalMessageCount.js"></script>
+    <script src="js/dashboard/networkanamolies/failedMessagesList_Graph.js"></script>
+    <script src="js/dashboard/networkanamolies/failedMessagesList.js"></script> 
+
+</body>
+</html>

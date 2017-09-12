@@ -1,0 +1,57 @@
+{
+  "name": "node-reporting-ui",
+  "version": "1.0.0",
+  "license": "private",
+  "private": true,
+  "author": "Neustar IoT Engineering",
+  "description": "Neustar IoT ",
+  "repository": {
+    "url": "https://github.com/Neustar-TDI/node-reporting-ui/tree/feature/psl/dashboard-0.1"
+  },
+  "issues": {
+    "url": "https://github.com/Neustar-TDI/node-reporting-ui/issues"
+  },
+  "homepage": "https://github.com/Neustar-TDI/node-reporting-ui/",
+  "main": "index.html",
+  "dependencies": {
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2"
+  },
+  "scripts": {
+    "build": "npm install && npm run compile",
+    "compile": "webpack",
+    "clean": "rimraf dist",
+    "startDev": "better-npm-run startDev"
+  },
+  "betterScripts": {
+    "startDev": {
+      "command": "nodemon bin/server",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "devServer"
+      }
+    }
+  },
+  "devDependencies": {
+    "better-npm-run": "^0.1.0",
+    "billboard.js": "^1.0.1",
+    "connect-history-api-fallback": "^1.3.0",
+    "css-loader": "^0.28.4",
+    "expose-loader": "^0.7.3",
+    "express": "^4.15.3",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.0",
+    "ip": "^1.1.5",
+    "jquery": "^2.1.4",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.6.1",
+    "script-loader": "^0.7.0",
+    "style-loader": "^0.18.2",
+    "timepicker": "^1.11.11",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.4.1",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-hot-middleware": "^2.18.2"
+  }
+}
