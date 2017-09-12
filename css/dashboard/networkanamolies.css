@@ -1,0 +1,720 @@
+﻿/* Reporting Dashboard CSS */
+
+/*Header CSS*/
+
+[data-reactroot] > header > hgroup h2 {
+    font-size: 2.4rem;
+}
+
+body main > section, #root main > section, [data-reactroot] main {
+    background-color: #F4F5F8;
+}
+
+#root section {
+    overflow-y: scroll !important;
+}
+
+#root main {
+    overflow-y: hidden !important;
+}
+
+label, th, span, div {
+    font-family: roboto;
+}
+
+[data-reactroot] > header > hgroup {
+    margin: 0 0 0 -15px;
+}
+/*Date time filter CSS*/
+#startTime, #endTime {
+    min-width: 9%;
+}
+
+
+
+#dateTimeHourSel {
+    width: 12%;
+    float: left;
+    background-color: white;
+    margin: 0;
+    height: 36px !important;
+    background-position: right 1.5rem top 10px;
+    padding: 0px 0px 6px 8px;
+}
+
+#selectFailedMessagesByDeviceOrFleet {
+    width: 12%;
+    float: left;
+    background-color: white;
+    margin: 8px 0 0 5px;
+    ;
+    height: 36px !important;
+    background-position: right 1.5rem top 10px;
+    padding: 0px 0px 2px 8px;
+}
+
+.daterange {
+    font-size: 18px;
+    padding: 10px 8px 0 15px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#successFailedTrendChart {
+    float: left;
+    width: 30%;
+    height: 415px;
+}
+
+.div-shadow {
+    border-radius: 2px !important;
+    box-shadow: 0.05rem 0.05rem 0.1rem 0 rgba(0, 0, 0, 0.4) !important;
+    background-color: #FFF;
+}
+
+#dashboard, .width100 {
+    width: 100% !important;
+}
+
+#failedFleets {
+    float: left;
+    width: 70%;
+    height: 415px;
+}
+
+#filterDiv {
+    border-radius: 6px;
+    ;
+    height: 60px;
+    margin: 30px 0 0 0;
+}
+
+.customFilterRange {
+    margin-right: 5%;
+}
+
+.startEndTime {
+    text-align: center;
+    padding: 25px 0 0 0;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="reset"]) {
+    min-width: 100%;
+    height: 35px !important;
+    background-color: #fff;
+}
+
+.refreshIcon {
+    width: 55px;
+    height: 38px;
+    font-size: 20px;
+    border-radius: 6px;
+    background: #0072C6;
+    color: #fff;
+    margin: -2px 0 0px 15px;
+}
+
+.align-noDataTotalCounts {
+    padding: 45% 0px 0px 8%;
+    position: static;
+
+}
+
+#chartTotalSuccessFailedCount {
+    position: static !important;
+}
+
+#chartTotalSuccessFailedPercentage {
+    position: static !important;
+}
+
+#percentFailedCountForChart {
+    float: right;
+    cursor: pointer;
+    background-image: url(../images/icon-image-sprite.png);
+    background-position: 406px 49px;
+    display: block;
+    width: 30px;
+    margin-top: 10px;
+    height: 30px;
+    background-color: #0072C6;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 12px;
+    margin-left: 2px;
+	
+}
+
+#percentFailedNumberForChart {
+    float: right;
+    cursor: pointer;
+    background-image: url(../images/icon-image-sprite.png);
+    background-position: 448px 163px;
+    display: block;
+    width: 30px;
+    margin-top: 10px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #0072C6;
+    border-radius: 6px;
+}
+
+
+#startdatetime {
+    margin: 0 0 0 -20%;
+}
+
+.totalFailedMessages .failedNumbersMsg {
+    padding: 14px 0 0 35px;
+}
+
+/*Failed messages by device chart css with jQgrid*/
+
+.expandIcon {
+    float: right;
+    cursor: pointer;
+    background-image: url(../images/icon-image-sprite.png);
+    background-position: -297px -26px;
+    display: block;
+    width: 20px;
+    height: 25px;
+    margin: 10px 15px 0 0px;
+}
+
+.collapseIcon {
+    float: right;
+    cursor: pointer;
+    background-image: url(../images/icon-image-sprite.png);
+    background-position: -340px -26px;
+    display: block;
+    width: 20px;
+    height: 25px;
+    margin: 10px 15px 0 0px;
+}
+
+.expanded-div-fleet-scroll {
+    position: relative;
+    overflow-y: auto;
+    height: 290px !important;
+    width: 980px !important;
+}
+
+
+.grid-icon {
+    float: right;
+    background-image: url(../images/icon-image-sprite.png);
+    background-position: 560px 165px;
+    display: block;
+    width: 30px;
+    margin-top: 10px;
+    height: 30px;
+    background-color: #0072C6;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 2px 0 0px;
+}
+
+.graph-icon {
+    float: right;
+    background-image: url(../images/icon-image-sprite.png);
+    background-position: 524px 165px;
+    display: block;
+    width: 30px;
+    margin-top: 10px;
+    height: 30px;
+    background-color: #0072C6;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 15px 0 0px;
+}
+
+#chartFailedDevice .bb-axis-y-label, #chartFailedFleet .bb-axis-y-label {
+    font-size: 14px;
+    padding: 10px 8px 0 15px;
+    font-family: roboto;
+    color: #333333;
+    font-weight: 300;
+}
+
+#chartFailedDevice tspan, #chartFailedFleet tspan {
+    font-size: 12px;
+}
+
+#chartFailedDevice .bb-tooltip-container, #chartFailedFleet .bb-tooltip-container {
+    left: 58% !important;
+    top: 14% !important;
+}
+
+#chartFailedFleet .bb-event-rect {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1601px) {
+    .expanded-div-fleet-scroll {
+        position: relative;
+        overflow-y: auto;
+        height: 290px !important;
+        width: 1152px !important;
+    }
+}
+
+@media only screen and (min-width: 1601px) {
+    #myInput {
+        min-width: 100%;
+        height: 35px !important;
+    }
+}
+
+label.search:after {
+    margin: -25px 0 0 0 !important;
+    font-size: 1em !important;
+    line-height: 1.5em !important;
+}
+
+.expandFleetDevice-th {
+    padding-left: 40px;
+}
+
+.filterTime {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+#exceptionChart {
+    border-radius: 6px;
+    width: 100%;
+    height: 345px;
+    padding-top: 1%;
+}
+
+.jqgrid-slidein-width {
+    width: 625px;
+}
+
+#failedMsgTable tr:first-child:hover, #failedMsgTable tr:nth-child(2):hover, #failedMsgTable tr:nth-child(3):hover, #failedMsgTable tr:nth-child(4):hover, #failedMsgTable tr:nth-child(5):hover, #failedMsgTable tr:nth-child(6):hover, #failedMsgTable tr:nth-child(7):hover, #failedMsgTable tr:nth-child(8):hover, #failedMsgTable tr:nth-child(9):hover, #failedMsgTable tr:nth-child(10):hover, #failedMsgTable tr:nth-child(11):hover {
+    background-color: #DBEBD4;
+    cursor: pointer !important;
+    height: 30px;
+}
+
+.ui-jqgrid-htable {
+    width: 635px !important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    margin: 18px 0 0 0;
+}
+
+.fleet-jqgrid-htable {
+    width: 1000px !important;
+    margin-left: -7%;
+}
+
+#gbox_failedMsgTable thead {
+    background: none;
+}
+
+#gbox_failedMsgTable {
+    margin: 4px 0 0 8%;
+}
+
+.ui-jqgrid-hdiv table > thead > tr > th {
+    border: none;
+}
+
+.jqgrid-fleetId-th-slidein {
+    width: 260px !important;
+}
+
+.jqgrid-fleetId-th-slideout {
+    width: 190px !important;
+}
+
+th#failedMsgTable_Device, #failedMsgTable_FleetId, th#failedMsgTable_Count {
+    border-bottom: 1px solid;
+}
+
+th#failedMsgTable_Count {
+    text-align: right;
+}
+
+.ui-jqgrid .ui-jqgrid-hbox {
+    padding: 40px 0 0 0;
+}
+
+.ui-icon {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/ui-icons_222222_256x240.png) /*{iconsContent}*/;
+}
+
+.ui-widget-content .ui-icon {
+    background-image: url(../images/ui-icons_222222_256x240.png) /*{iconsContent}*/;
+}
+
+.ui-widget-header .ui-icon {
+    background-image: url(../images/ui-icons_222222_256x240.png) /*{iconsHeader}*/;
+}
+
+.ui-state-default .ui-icon {
+    background-image: url(../images/ui-icons_888888_256x240.png) /*{iconsDefault}*/;
+}
+
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {
+    background-image: url(../images/ui-icons_454545_256x240.png) /*{iconsHover}*/;
+}
+
+.ui-state-active .ui-icon {
+    background-image: url(../images/ui-icons_454545_256x240.png) /*{iconsActive}*/;
+}
+
+/*{iconsHighlight}*/
+/*
+.ui-state-highlight .ui-icon {
+    background-image: url(../images/ui-icons_2e83ff_256x240.png) ;
+}
+*/
+ /*{iconsError}*/;
+/*.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
+    background-image: url(../images/ui-icons_cd0a0a_256x240.png)
+}*/
+
+.ui-icon-triangle-1-n {
+    background-position: 4px -21px;
+}
+
+.ui-icon-triangle-1-s {
+    background-position: -66px -10px;
+    margin: 0 0 0 -11px;
+}
+
+.ui-state-default ui-th-column ui-th-ltr .ui-state-hover {
+    background-image: url(../images/ui-icons_888888_256x240.png) /*{iconsDefault}*/;
+}
+
+#failedMsgTable_Device .s-ico {
+    display: none !important;
+}
+
+.s-ico {
+    display: block !important;
+    float: right;
+    padding: 0;
+}
+
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled {
+    opacity: .35;
+}
+
+.devideIdWidth {
+    color: #7DB5F2;
+    font-size: 15px;
+    text-align: left;
+}
+
+.fleetIdWidth {
+    color: #7DB5F2;
+    font-size: 15px;
+    text-align: left;
+}
+
+#failedMsgTable {
+    margin: -1% 0 0% 0;
+    width: 70%;
+    border: none;
+}
+
+    #failedMsgTable tr {
+        display: none;
+        border-bottom: none;
+    }
+
+        #failedMsgTable tr:first-child, #failedMsgTable tr:nth-child(2), #failedMsgTable tr:nth-child(3), #failedMsgTable tr:nth-child(4), #failedMsgTable tr:nth-child(5), #failedMsgTable tr:nth-child(6), #failedMsgTable tr:nth-child(7), #failedMsgTable tr:nth-child(8), #failedMsgTable tr:nth-child(9), #failedMsgTable tr:nth-child(10), #failedMsgTable tr:nth-child(11) {
+            display: block;
+            height: 30px;
+        }
+
+table tbody > tr:focus {
+    background-color: none !important;
+}
+
+#failedMsgTable_FleetId .ui-jqgrid-resize {
+    margin-left: 25px;
+}
+
+#failedMsgTable_FleetId .s-ico {
+    margin: 0 70% 0 0;
+}
+
+.fleet-jqgrid-htable #failedMsgTable_Device .ui-jqgrid-resize {
+    margin-left: 30px;
+}
+
+.fleet-jqgrid-htable #failedMsgTable_FleetId .ui-jqgrid-resize {
+    margin-left: 50px;
+}
+
+#chartFailedFleet {
+    margin: 2% 30% 0 0;
+    position: static !important;
+    display: inline-block;
+}
+
+#chartFailedDevice {
+    margin: 2% 30% 0 0;
+    position: static !important;
+    display: inline-block;
+}
+
+/*show failed message log section css*/
+.hideMsgList {
+    padding-left: 18px;
+    color: #8ba2b2;
+    cursor: pointer;
+}
+
+.start-date-margin {
+    margin: -4px -18px 0 0px;
+}
+
+.showFailedMsg {
+    height: 450px;
+    border-radius: 6px;
+}
+
+.failedMsgSection {
+    height: 11%;
+    border-bottom: 1px solid #EAE8E8;
+    border-radius: 2px;
+    padding-top: 6px;
+}
+
+.failedMsgSection input[type="checkbox"] {
+margin: 10px 5px 0px 20px;
+}
+
+.search {
+    float: right;
+    width: 30%;
+    margin: 0px 10px 0 0px;
+}
+
+.searchText {
+    background: #f5e8e8;
+    width: 100%;
+    min-width: 100% !important;
+    height: 35px !important;
+}
+
+.logo {
+    width: 100%;
+}
+
+.alignFailedMessages {
+    margin: 0px 0px 0 25px;
+}
+
+.align-noDataMsgForDate {
+    margin: 20% 0 0 0;
+}
+
+.highlight {
+    cursor: pointer;
+}
+
+.searchIcon {
+    float: left;
+    cursor: pointer;
+    background-image: url(../images/icon-image-sprite.png);
+    background-position: 402px 50px;
+    display: block;
+    width: 30px;
+    margin: -25px 0 0-20px;
+}
+
+td.failedMsgTimeStamp {
+    width: 18%;
+    padding: 0 0px 0 25px;
+    user-select: text;
+}
+
+.failedMsgSection .float-left {
+    font-size: 18px;
+}
+
+.countWidth {
+    font-size: 14px;
+}
+
+.countWidth {
+    float: right;
+    margin-top: -30px;
+}
+
+input#endDate, input#startDate {
+    min-width: 11rem;
+}
+
+.failedMsgDefaultMsg {
+    color: black;
+    margin: 5% 0 0 0;
+    color: slategrey;
+    font-size: 12px;
+}
+
+.noDataMsgForDate {
+    color: black;
+    margin: 5% 0 0 0;
+    color: slategrey;
+    font-size: 14px;
+}
+
+.failedMsgTimeAndJson {
+    font-size: 12px;
+    border-bottom: none;
+}
+
+.successfailedNumbersMsg, .successfailedPercentMsg {
+    color: green;
+    margin: 12px 0px 0px -170px;
+    font-size: 15px;
+}
+
+.highlight:hover {
+    background-color: #DBEBD4;
+    cursor: pointer;
+}
+
+.fleetFailedMsgId {
+    color: blue;
+    font-size: 14px;
+    width: 96%;
+    text-align: left;
+}
+
+.msg-log-header {
+    width: 22%;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #EAE8E8;
+}
+
+.marginBottom35 {
+    margin-bottom: 35px;
+}
+
+.overflowListOfEvents {
+    overflow-y: auto;
+    height: 88%;
+    width: 100%;
+}
+
+#listOfMessagesTable {
+    margin: 0;
+}
+
+.padding-top95 {
+    padding-top: 95px;
+}
+
+.slide-out-table-width {
+    width: 950px !important;
+}
+
+.device-td-width {
+    width: 61% !important;
+}
+
+.fleet-td-width {
+    width: 365px !important;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.display-block {
+    display: block !important;
+}
+
+
+.failedMsgTimeAndJson.error .failedMsgTimeStamp, .failedMsgJSON.errorstatus, td.failedMsgJSON.errorStatus {
+    color: orangered !important;
+    user-select: text;
+}
+
+td.failedMsgJSON.errorStatus, td.failedMsgJSON.successStatus {
+    text-align: left;
+}
+
+td.failedMsgTimeStamp.successTimeStamp, td.failedmsgjson.successstatus {
+    color: black !important;
+    user-select: text;
+}
+
+.fleetDeviceLable {
+    font-size: 18px;
+}
+
+.fleetLabel, .deviceIdLabel {
+    margin: 0px 0 0 3%;
+    font-size: 18px;
+    font-weight: 500;
+    color: darkslategrey;
+}
+
+.padding-top-8 {
+    padding-top: 8px;
+}
+
+.totalFailedMessages {
+    width: 97%;
+    height: 100%;
+}
+
+.countOfActiveDevices {
+    width: 98%;
+    height: 49%;
+    margin-top: 7px;
+}
+
+.failedNumbersMsg {
+    font-size: 20px;
+    padding: 10px 8px 0 15px;
+    font-family: roboto,regular;
+    color: #333333;
+}
+
+.totalFailedMessagesCount {
+    padding: 24% 0 0 0;
+    color: slategrey;
+    font-size: 25px;
+}
+
+.fleetDeviceHeader {
+    width: 96%;
+}
+
+.clicked {
+    color: #1439a8;
+}
+
+
+.msgShow{
+	color: #f22929;
+    font-size: 13px;
+    position: relative;
+	top:5px;
+}
+.safariLeftChart {
+display: inline-block;
+top:-150px;
+left: -150px;
+position: relative;
+}
